@@ -1,0 +1,40 @@
+<div class="mat-elevation-z4">
+    <table mat-table [dataSource]="users">
+    
+     <ng-container matColumnDef="id_usuario">
+        <th mat-header-cell *matHeaderCellDef>Codigo</th>
+     <th mat-cell *matCellDef="let row">{{ row.id_usuario }}</th>
+    </ng-container>
+    
+    <ng-container matColumnDef="nm_usuario">
+        <th mat-header-cell *matHeaderCellDef>Nome</th>
+     <th mat-cell *matCellDef="let row">{{ row.nm_usuario }}</th>
+    </ng-container>
+
+    <ng-container matColumnDef="dt_nascimento">
+      <th mat-header-cell *matHeaderCellDef>Data Nascimento</th>
+   <th mat-cell *matCellDef="let row">{{ row.dt_nascimento | date:"dd/MM/yyyy" }}</th>
+  </ng-container>
+    
+    <ng-container matColumnDef="login">
+        <th mat-header-cell *matHeaderCellDef>Login</th>
+     <th mat-cell *matCellDef="let row">{{ row.login }}</th>
+    </ng-container>
+    
+    <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef>Ações</th>
+     <th mat-cell *matCellDef="let row">
+        <a routerLink="/usuario/create/{{ row.id_usuario }}">
+        <i class="material-icons edit">edit</i>
+      </a> 
+      <a (click)="Excluir(row.id_usuario)">
+        <i class="material-icons delete">delete</i>
+      </a>
+     </th>
+    </ng-container>
+    
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+    </div>
+    

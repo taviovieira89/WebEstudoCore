@@ -1,0 +1,13 @@
+table {
+    width: 100%;
+    margin-top: 10px;
+}
+
+i.edit {
+ color: yellow;
+ margin-right: 5px;
+}
+
+i.delete{
+    color: red;
+}

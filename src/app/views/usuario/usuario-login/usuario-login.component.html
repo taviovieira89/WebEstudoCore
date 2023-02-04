@@ -1,0 +1,22 @@
+<mat-card class="card">
+    <mat-card-title class="subtitle">Logar no Sistema</mat-card-title>   
+<form>
+    <div>
+    <mat-form-field>
+    <mat-label>Login</mat-label>
+     <input matInput placeholder="Digite seu login" name="usename" [(ngModel)] ="user.login">
+    </mat-form-field>
+    </div>
+    <mat-form-field>
+    <mat-label>Senha</mat-label>
+    <input matInput placeholder="Digite sua senha" value="" name="password" type="password" [(ngModel)]= "user.senha">
+   </mat-form-field>
+   <div>
+    <button mat-raised-button color="accent" (click)="Logar()">Entrar</button>
+    <a (click)="RedirectAcesso();">Criar Usuário</a>
+   </div>
+
+</form>
+</mat-card>
+
+    

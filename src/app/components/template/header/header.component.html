@@ -1,0 +1,17 @@
+<mat-toolbar ng-show="ehVisivel" id="Header01" class="header mat-elevation-z4">
+<span>
+    <a>
+        <img class="logo" src="assets/img/imgestudo.jpg" alt="logo">
+    </a>
+</span>
+<span class="title-group">
+    <a>
+<i class="material-icons">home</i>
+{{ title }}
+    </a>
+</span>
+<span class="sLogout" (click)="logout()">
+    <i class="material-icons" (click)="logout()">logout</i>Sair
+</span>
+
+</mat-toolbar>
