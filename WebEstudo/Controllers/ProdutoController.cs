@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using WebEstudo.DTO.Entidades;
 using WebEstudo.DTO.Interfaces;
 using WebEstudo.DTO.Roles;
+using WebEstudo.DTO.Services;
 using WebEstudo.Models;
 
 namespace WebEstudo.Controllers
@@ -11,11 +12,11 @@ namespace WebEstudo.Controllers
     [Route("[controller]")]
     public class ProdutoController : Controller
     {
-        private readonly IProdutoDTO _ProdutoDTO;
+        private readonly IProdutoServices _ProdutoDTO;
         private readonly ILogger<UsuarioController> _logger;
         private Result JsonRetorno = null;
         private IConfiguration _configuration;
-        public ProdutoController(IProdutoDTO ProdutoDTO, ILogger<UsuarioController> logger, IConfiguration configuration)
+        public ProdutoController(IProdutoServices ProdutoDTO, ILogger<UsuarioController> logger, IConfiguration configuration)
         {
             this._ProdutoDTO = ProdutoDTO;
             this._logger = logger;

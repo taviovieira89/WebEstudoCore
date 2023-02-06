@@ -11,11 +11,11 @@ namespace WebEstudo.Controllers
     [Route("[controller]")]
     public class UsuarioController : Controller
     {
-        private readonly IUsuarioDTO _usuarioDTO;
+        private readonly IUsuarioServices _usuarioDTO;
         private readonly ILogger<UsuarioController> _logger;
         private Result JsonRetorno = null;
         private IConfiguration _configuration;
-        public UsuarioController(IUsuarioDTO usuarioDTO, ILogger<UsuarioController> logger, IConfiguration configuration)
+        public UsuarioController(IUsuarioServices usuarioDTO, ILogger<UsuarioController> logger, IConfiguration configuration)
         {
             this._usuarioDTO = usuarioDTO;
             this._logger = logger;

@@ -33,10 +33,10 @@ builder.Services.AddDbContext<DaoContext>(options =>
 });
 
 builder.Services.AddTransient<IRepository, Conexao>();
-builder.Services.AddTransient<IUsuarioDao, UsuarioDAO>();
-builder.Services.AddTransient<IUsuarioDTO, UsuarioServices>();
-builder.Services.AddTransient<IProdutoDao, ProdutoDAO>();
-builder.Services.AddTransient<IProdutoDTO, ProdutoServices>();
+builder.Services.AddTransient<IUsuarioRepository, UsuarioRepository>();
+builder.Services.AddTransient<IUsuarioServices, UsuarioServices>();
+builder.Services.AddTransient<IProdutoRepository, ProdutoRepository>();
+builder.Services.AddTransient<IProdutoServices, ProdutoServices>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
