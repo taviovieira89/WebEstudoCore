@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using WebEstudo.Comum.Filter;
 using WebEstudo.DTO.Entidades;
 using WebEstudo.DTO.Interfaces;
 using WebEstudo.DTO.Roles;
@@ -9,6 +9,8 @@ namespace WebEstudo.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [TypeFilter(typeof(ErrorFilter))]
+    [ServiceFilter(typeof(ActionFilter))]
     public class UsuarioController : Controller
     {
         private readonly IUsuarioServices _usuarioDTO;
@@ -22,7 +24,7 @@ namespace WebEstudo.Controllers
             this._configuration = configuration;
         }
 
-        [HttpGet, Authorize]
+        [HttpGet, AuthorizeFilter]
         public ActionResult<Result> Get()
         {
             try
@@ -32,12 +34,12 @@ namespace WebEstudo.Controllers
             }
             catch (Exception ex)
             {
-                JsonRetorno = new Result() { Data = "", Mensagem = ex.Message, Erro = true };
+                _logger.LogError(ex, "Ocorreu um erro no EndPoint GET.");
             }
             return JsonRetorno;
         }
 
-        [HttpGet, Authorize]
+        [HttpGet, AuthorizeFilter]
         [Route("GetId/{Id}")]
         public ActionResult<Result> Get(int Id)
         {
@@ -48,12 +50,12 @@ namespace WebEstudo.Controllers
             }
             catch (Exception ex)
             {
-                JsonRetorno = new Result() { Data = "", Mensagem = ex.Message, Erro = true };
+                _logger.LogError(ex, "Ocorreu um erro no EndPoint GET.");
             }
             return JsonRetorno;
         }
 
-        [HttpGet, Authorize]
+        [HttpGet, AuthorizeFilter]
         [Route("GetName/{Name}")]
         public ActionResult<Result> Get(string Name)
         {
@@ -64,12 +66,12 @@ namespace WebEstudo.Controllers
             }
             catch (Exception ex)
             {
-                JsonRetorno = new Result() { Data = "", Mensagem = ex.Message, Erro = true };
+                _logger.LogError(ex, "Ocorreu um erro no EndPoint GET.");
             }
             return JsonRetorno;
         }
 
-        [HttpPost, Authorize]
+        [HttpPost, AuthorizeFilter]
         public ActionResult<Result> Post([FromBody] UsuarioDTO users)
         {
             try
@@ -84,7 +86,7 @@ namespace WebEstudo.Controllers
             }
             catch (Exception ex)
             {
-                JsonRetorno = new Result() { Data = "", Mensagem = ex.Message, Erro = true };
+                _logger.LogError(ex, "Ocorreu um erro no EndPoint POST.");
             }
             return JsonRetorno;
         }
@@ -95,42 +97,32 @@ namespace WebEstudo.Controllers
         {
             try
             {
-                if (!ModelState.IsValid)
-                {
-                    return BadRequest();
-                }
-
                 var user = _usuarioDTO.Salvar(users);
                 JsonRetorno = new Result() { Data = user, Mensagem = "Usuário salvo com sucesso!!", Erro = false };
             }
             catch (Exception ex)
             {
-                JsonRetorno = new Result() { Data = "", Mensagem = ex.Message, Erro = true };
+                _logger.LogError(ex, "Ocorreu um erro no EndPoint POST.");
             }
             return JsonRetorno;
         }
 
-        [HttpPut, Authorize]
+        [HttpPut, AuthorizeFilter]
         public ActionResult<Result> Put([FromBody] UsuarioDTO users)
         {
             try
             {
-                if (!ModelState.IsValid)
-                {
-                    return BadRequest();
-                }
-
                 var user = _usuarioDTO.Salvar(users);
                 JsonRetorno = new Result() { Data = user, Mensagem = "Usuário salvo com sucesso!!", Erro = false };
             }
             catch (Exception ex)
             {
-                JsonRetorno = new Result() { Data = "", Mensagem = ex.Message, Erro = true };
+                _logger.LogError(ex, "Ocorreu um erro no EndPoint PUT.");
             }
             return JsonRetorno;
         }
 
-        [HttpDelete, Authorize]
+        [HttpDelete, AuthorizeFilter]
         [Route("Exclusao/{IdUsuario}")]
         public ActionResult<Result> Delete(int IdUsuario)
         {
@@ -143,7 +135,7 @@ namespace WebEstudo.Controllers
             }
             catch (Exception ex)
             {
-                JsonRetorno = new Result() { Data = "", Mensagem = ex.Message, Erro = true };
+                _logger.LogError(ex, "Ocorreu um erro no EndPoint DELETE.");
             }
             return JsonRetorno;
         }
@@ -154,17 +146,12 @@ namespace WebEstudo.Controllers
         {
             try
             {
-                if (!ModelState.IsValid)
-                {
-                    return BadRequest();
-                }
-
                 var token = _usuarioDTO.Login(_configuration, logins.login, logins.senha, true);
                 JsonRetorno = new Result() { Data = token, Mensagem = "Obteve Token com sucesso!!", Erro = false };
             }
             catch (Exception ex)
             {
-                JsonRetorno = new Result() { Data = "", Mensagem = ex.Message, Erro = true };
+                _logger.LogError(ex, "Ocorreu um erro no EndPoint POST.");
             }
             return JsonRetorno;
         }
