@@ -1,6 +1,6 @@
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -18,7 +18,7 @@ import { UsuarioComponent } from './views/usuario/usuario.component';
 import { MatButtonModule } from '@angular/material/button';
 import { ProdutoCreateComponent } from './views/produto/produto-create/produto-create.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { HttpClientModule  } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -51,6 +51,7 @@ registerLocaleData(localePt)
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,

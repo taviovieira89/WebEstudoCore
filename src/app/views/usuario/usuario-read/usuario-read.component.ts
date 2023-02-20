@@ -10,7 +10,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   templateUrl: './usuario-read.component.html',
   styleUrls: ['./usuario-read.component.css']
 })
-export class UsuarioReadComponent {
+export class UsuarioReadComponent implements OnInit{
   users: Usuario[]
   displayedColumns = ['id_usuario', 'nm_usuario','dt_nascimento' ,'login', 'action']
 

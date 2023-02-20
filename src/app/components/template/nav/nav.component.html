@@ -1,5 +1,5 @@
 <mat-sidenav-container  class="container" id="matContainer">
-<mat-sidenav ng-show="ehVisivel" id="Nav01" class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
+<mat-sidenav *ngIf="ehVisivel" id="Nav01" class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
 <mat-nav-list class="nav-list">
 <a mat-list-item routerLink="/home">
 <i class="material-icons"> home</i>

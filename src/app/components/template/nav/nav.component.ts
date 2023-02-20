@@ -6,18 +6,18 @@ import { Router, ActivatedRoute } from '@angular/router';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css']
 })
-export class NavComponent {
+export class NavComponent implements OnInit {
 
-  ehVisivel: boolean = true;
+  ehVisivel = true;
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    debugger
     if (localStorage.getItem("token") == undefined || localStorage.getItem("token") == null) {
-      this.ehVisivel = true;
-    } else {
       this.ehVisivel = false;
+    } else {
+      this.ehVisivel = true;
     }
   }
-
 }

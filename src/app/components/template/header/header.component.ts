@@ -10,18 +10,18 @@ import { Injectable } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
 
-  ehVisivel: boolean = true;
+  ehVisivel = true;
   title: string = ""
 
   constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     if (localStorage.getItem("token") == undefined || localStorage.getItem("token") == null) {
-      this.ehVisivel = true;
-    } else {
       this.ehVisivel = false;
+    } else {
+      this.ehVisivel = true;
     }
     console.log(this.title)
     this.title = "Sistema de Estoque"
