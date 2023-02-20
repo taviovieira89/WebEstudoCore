@@ -10,14 +10,16 @@ namespace WebEstudo.Comum.Filter
             if (!context.ModelState.IsValid)
             {
                 context.HttpContext.Response.StatusCode = 400;
-                context.Result = new BadRequestObjectResult(context.ModelState);
+                var jsonResult = new JsonResult(new { Data = "", Mensagem = "Existem Campos Obrigatórios que não foram informados.", Erro = true });
+                context.Result = jsonResult;
                 return;
             }
         }
 
         public void OnActionExecuting(ActionExecutingContext context)
         {
-            return;
+            //Nada a fazer
+            //  return;
         }
     }
 }
