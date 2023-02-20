@@ -30,6 +30,7 @@ export class HeaderComponent implements OnInit {
   logout(): void {
     localStorage.removeItem("token")
     localStorage.removeItem("UserId")
+    localStorage.setItem("Log in","SIM");
     this.router.navigate(['/']);
   }
 }

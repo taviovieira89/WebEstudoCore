@@ -15,7 +15,13 @@ export class UsuarioLoginComponent implements OnInit {
     senha: ''
   }
 
-  constructor(private usuarioService: UsuarioService, private router: Router) { }
+  constructor(private usuarioService: UsuarioService, private router: Router) { 
+     if (localStorage.getItem("Log in") != undefined &&
+        localStorage.getItem("Log in") != null) {
+        window.location.reload();
+        localStorage.removeItem("Log in")
+      }
+  }
 
   ngOnInit(): void {
     localStorage.removeItem("token");
@@ -31,6 +37,7 @@ export class UsuarioLoginComponent implements OnInit {
           var token = f.data[1];
           localStorage.setItem("token", token)
           localStorage.setItem("UserId", userid)
+          localStorage.setItem("Logout", "SIM");
           this.usuarioService.MostraLoader(false)
           this.router.navigate(['/home']);
         } else {

@@ -7,7 +7,13 @@ import { HeaderComponent } from 'src/app/components/template/header/header.compo
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  constructor(private header: HeaderComponent) {}
+  constructor(private header: HeaderComponent) {
+    if (localStorage.getItem("Logout") != undefined &&
+      localStorage.getItem("Logout") != null) {
+      window.location.reload();
+      localStorage.removeItem("Logout")
+    }
+  }
 
   ngOnInit(): void {
     this.header.title = "Home";

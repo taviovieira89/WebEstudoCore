@@ -1,87 +1,41 @@
-/* form { 
-    vertical-align: middle;
-    padding-left: 36%;
-    display:list-item;
-    padding-top: 5%;
-    background-color: lightgray;
+.container {
+   /* margin-top: 30px;  */
+  display: flex;
+  justify-content: center;
+
+}
+
+.divGeral {
+  background-image: url("/assets/img/imgestudo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 98vw;
+  height: 95vh;
+}
+
+mat-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 24px;
+  margin-top: 80px;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
 }
 
 button {
-    width: 46%;
-    margin-top: 10px;
-    margin-right: 15px;
-    margin-bottom: 5px;
-    margin-left: 5px;
+  margin-top: 16px;
 }
 
-.subtitle{
-    vertical-align: middle;
-    padding-left: 40%;
-    margin-bottom: 5px;
-    margin-top: 20px;
-    background-color: red;
-    font-size: medium;
-    font: bold;
+a {
+  vertical-align: -webkit-baseline-middle;
+  margin-left: 10px;
 }
 
-.card{
-    margin-bottom: 30%;
-    margin-top: 10%;
-    width: 50%;
-    margin-left: 25%;
-    background-color: red;
-    
+.subtitle {
+  vertical-align: middle;
+  margin-bottom: 5px;
+  margin-top: 20px;
 }
-
-#divSidenavContent {
-    background-image: url("https://www.w3schools.com/cssref/img_tree.gif") !important;
-} */
-
-.container {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    background-image: url("/assets/img/imgestudo.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-  }
-
-  
-  /* mat-card {
-    max-width: 400px;
-    width: 100%;
-  }
-
-  mat-form-field {
-    width: 100%;
-  }
-  
-  button {
-    margin-top: 16px;
-  } */
-
-  mat-card {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 24px;
-  }
-  
-  mat-form-field {
-    width: 100%;
-    margin-bottom: 16px;
-  }
-  
-  button {
-    margin-top: 16px;
-  }
-
-  a {
-    vertical-align: -webkit-baseline-middle;
-    margin-left: 10px;
-  }
-  
-  .subtitle{
-    vertical-align: middle;
-    margin-bottom: 5px;
-    margin-top: 20px;
-  }
