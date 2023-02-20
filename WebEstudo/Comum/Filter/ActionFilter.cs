@@ -17,7 +17,7 @@ namespace WebEstudo.Comum.Filter
 
         public void OnActionExecuting(ActionExecutingContext context)
         {
-            throw new NotImplementedException();
+            return;
         }
     }
 }

@@ -72,6 +72,7 @@ namespace WebEstudo.Controllers
         }
 
         [HttpPost, AuthorizeFilter]
+        [ServiceFilter(typeof(ActionFilter))]
         public ActionResult<Result> Post([FromBody] UsuarioDTO users)
         {
             try
@@ -93,6 +94,7 @@ namespace WebEstudo.Controllers
 
         [HttpPost]
         [Route("Acesso")]
+        [ServiceFilter(typeof(ActionFilter))]
         public ActionResult<Result> UsuarioAcesso([FromBody] UsuarioDTO users)
         {
             try
@@ -108,6 +110,7 @@ namespace WebEstudo.Controllers
         }
 
         [HttpPut, AuthorizeFilter]
+        [ServiceFilter(typeof(ActionFilter))]
         public ActionResult<Result> Put([FromBody] UsuarioDTO users)
         {
             try
@@ -142,6 +145,7 @@ namespace WebEstudo.Controllers
 
         [HttpPost]
         [Route("Login")]
+        [ServiceFilter(typeof(ActionFilter))]
         public ActionResult<Result> Login([FromBody] LoginModel logins)
         {
             try

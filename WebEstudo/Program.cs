@@ -28,6 +28,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddTransient<Conexao>();
+builder.Services.AddScoped<ActionFilter>();
 
 var connectionString = builder.Configuration.GetConnectionString("ConnectionString");
 builder.Services.Configure<DaoContext>(builder.Configuration.GetSection("ConnectionStrings"));
