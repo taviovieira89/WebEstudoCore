@@ -1,3 +1,4 @@
+import { LoadingService } from './../template/loader/loader.service';
 import { Produto } from './../../views/produto/produto';
 import { Result } from './../../views/result';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -14,7 +15,7 @@ export class ProdutoService {
 
   headers = new HttpHeaders().set("Authorization", "Bearer " + localStorage.getItem("token"))
 
-  constructor(private sanckbar: MatSnackBar, private http: HttpClient) { }
+  constructor(private sanckbar: MatSnackBar, private http: HttpClient, private loader: LoadingService) { }
 
 
   create(produto: Produto): Observable<Result> {
@@ -48,8 +49,7 @@ export class ProdutoService {
   }
 
   MostraLoader(visible: boolean) {
-    const head = document.querySelector<HTMLElement>('#divloading')!;
-    head.style.display = visible ? "block" : "none";
+    this.loader.HabDesabilitaLoading(visible)
   }
 
 }

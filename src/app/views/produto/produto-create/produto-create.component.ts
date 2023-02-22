@@ -12,7 +12,7 @@ export class ProdutoCreateComponent implements OnInit {
 
   product: Produto = {
     nm_produto: '',
-    preco: 0.00
+    preco: undefined
   }
 
   title: string = "Novo Produto";
@@ -38,13 +38,15 @@ export class ProdutoCreateComponent implements OnInit {
   }
 
   SalvarProduto(): void {
-
+    const prize = this.product.preco ? this.product.preco : 0;
     if (this.product.nm_produto == "" ||
-      this.product.preco.toString() == "") {
+      (prize.toString() == "" || prize == 0)) {
       this.produtoService.showMessage("Os campos  nome e preço são obrigatórios!!");
       return;
     }
     this.produtoService.MostraLoader(true)
+    this.product.preco = parseFloat(prize.toString().replace(',','.'));
+    
     let userId: string | undefined = localStorage.getItem("UserId")!;
     if (this.edicao) {
       this.product.id_usuario_edicao = userId;

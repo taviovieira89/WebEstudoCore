@@ -1,3 +1,4 @@
+import { LoadingService } from './../loader/loader.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Injectable } from '@angular/core';
@@ -15,7 +16,7 @@ export class HeaderComponent implements OnInit {
   ehVisivel = true;
   title: string = ""
 
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(private route: ActivatedRoute, private router: Router, private loader: LoadingService) { }
 
   ngOnInit(): void {
     if (localStorage.getItem("token") == undefined || localStorage.getItem("token") == null) {
@@ -28,9 +29,10 @@ export class HeaderComponent implements OnInit {
   }
 
   logout(): void {
+    this.loader.HabDesabilitaLoading(true)
     localStorage.removeItem("token")
     localStorage.removeItem("UserId")
-    localStorage.setItem("Log in","SIM");
+    localStorage.setItem("Log in", "SIM");
     this.router.navigate(['/']);
   }
 }

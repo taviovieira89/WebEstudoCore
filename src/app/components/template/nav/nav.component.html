@@ -1,23 +1,25 @@
-<mat-sidenav-container  class="container" id="matContainer">
-<mat-sidenav *ngIf="ehVisivel" id="Nav01" class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
-<mat-nav-list class="nav-list">
-<a mat-list-item routerLink="/home">
-<i class="material-icons"> home</i>
-Início
-</a>
+<mat-sidenav-container class="container" id="matContainer">
+    <mat-sidenav *ngIf="ehVisivel" id="Nav01" class="sidenav" mode="side" opened fixedInViewport="true"
+        fixedTopGap="64">
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink="/home">
+                <i class="material-icons"> home</i>
+                Início
+            </a>
 
-<a mat-list-item routerLink="/usuario">
-    <i class="material-icons"> person</i>
-    Usuário
-    </a>
+            <a mat-list-item routerLink="/usuario">
+                <i class="material-icons"> person</i>
+                Usuário
+            </a>
 
-<a mat-list-item routerLink="/produto"> 
-    <i class="material-icons"> storefront</i>
-    Produto
-</a>
-</mat-nav-list>
-</mat-sidenav>
-<mat-sidenav-content id="divSidenavContent" class="content">
-    <router-outlet></router-outlet>
-</mat-sidenav-content>
+            <a mat-list-item routerLink="/produto">
+                <i class="material-icons"> storefront</i>
+                Produto
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content id="divSidenavContent" class="content">
+        <router-outlet></router-outlet>
+        <app-loading></app-loading>
+    </mat-sidenav-content>
 </mat-sidenav-container>

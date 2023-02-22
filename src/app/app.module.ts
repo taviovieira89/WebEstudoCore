@@ -1,3 +1,4 @@
+import { LoadingComponent } from './components/template/loader/loader.component';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
@@ -43,6 +44,7 @@ registerLocaleData(localePt)
     HomeComponent,
     ProdutoComponent,
     UsuarioComponent,
+    LoadingComponent,
     ProdutoCreateComponent,
     ProdutoReadComponent,
     UsuarioReadComponent,
