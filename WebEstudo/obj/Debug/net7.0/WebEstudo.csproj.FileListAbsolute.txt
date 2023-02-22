@@ -106,3 +106,4 @@ C:\Users\tavio\source\repos\WebEstudo\WebEstudo\bin\Debug\net7.0\Front\WebEstudo
 C:\Users\tavio\source\repos\WebEstudo\WebEstudo\bin\Debug\net7.0\Front\WebEstudoFront\package.json
 C:\Users\tavio\source\repos\WebEstudo\WebEstudo\bin\Debug\net7.0\Front\WebEstudoFront\tsconfig.app.json
 C:\Users\tavio\source\repos\WebEstudo\WebEstudo\bin\Debug\net7.0\Front\WebEstudoFront\tsconfig.json
+C:\Users\tavio\source\repos\WebEstudo\WebEstudo\bin\Debug\net7.0\Front\package.json
