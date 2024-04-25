@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wQSn0TYap97fb8PUYMc2Rn3NYQWbH3W/EE+I4HgJmKThRoCZl5vACWudUkjWgWbCLXB1NZgazYoTWhueIA0yDA==",
+  "dgSpecHash": "/uUE+f3unJLpiiBaGvG6Bj4/gmZEF1kwNyJkDxnw3wyLl5Ef6JQAxscvdaiCdLpJTfxVFG+bop7nYPdGByPQqA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tavio\\source\\repos\\WebEstudo\\TestWebEstudo\\TestWebEstudo.csproj",
+  "projectFilePath": "C:\\Git\\projetos\\WebEstudoCore\\TestWebEstudo\\TestWebEstudo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tavio\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\tavio\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

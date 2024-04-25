@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tavio\\source\\repos\\WebEstudo\\TestWebEstudo\\TestWebEstudo.csproj": {}
+    "C:\\Git\\projetos\\WebEstudoCore\\TestWebEstudo\\TestWebEstudo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tavio\\source\\repos\\WebEstudo\\TestWebEstudo\\TestWebEstudo.csproj": {
+    "C:\\Git\\projetos\\WebEstudoCore\\TestWebEstudo\\TestWebEstudo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tavio\\source\\repos\\WebEstudo\\TestWebEstudo\\TestWebEstudo.csproj",
+        "projectUniqueName": "C:\\Git\\projetos\\WebEstudoCore\\TestWebEstudo\\TestWebEstudo.csproj",
         "projectName": "TestWebEstudo",
-        "projectPath": "C:\\Users\\tavio\\source\\repos\\WebEstudo\\TestWebEstudo\\TestWebEstudo.csproj",
+        "projectPath": "C:\\Git\\projetos\\WebEstudoCore\\TestWebEstudo\\TestWebEstudo.csproj",
         "packagesPath": "C:\\Users\\tavio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tavio\\source\\repos\\WebEstudo\\TestWebEstudo\\obj\\",
+        "outputPath": "C:\\Git\\projetos\\WebEstudoCore\\TestWebEstudo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tavio\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\tavio\\source\\repos\\WebEstudo\\WebEstudo\\WebEstudo.csproj": {
-                "projectPath": "C:\\Users\\tavio\\source\\repos\\WebEstudo\\WebEstudo\\WebEstudo.csproj"
+              "C:\\Git\\projetos\\WebEstudoCore\\WebEstudo\\WebEstudo.csproj": {
+                "projectPath": "C:\\Git\\projetos\\WebEstudoCore\\WebEstudo\\WebEstudo.csproj"
               }
             }
           }
@@ -81,14 +81,14 @@
         }
       }
     },
-    "C:\\Users\\tavio\\source\\repos\\WebEstudo\\WebEstudo\\WebEstudo.csproj": {
+    "C:\\Git\\projetos\\WebEstudoCore\\WebEstudo\\WebEstudo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tavio\\source\\repos\\WebEstudo\\WebEstudo\\WebEstudo.csproj",
+        "projectUniqueName": "C:\\Git\\projetos\\WebEstudoCore\\WebEstudo\\WebEstudo.csproj",
         "projectName": "WebEstudo",
-        "projectPath": "C:\\Users\\tavio\\source\\repos\\WebEstudo\\WebEstudo\\WebEstudo.csproj",
+        "projectPath": "C:\\Git\\projetos\\WebEstudoCore\\WebEstudo\\WebEstudo.csproj",
         "packagesPath": "C:\\Users\\tavio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tavio\\source\\repos\\WebEstudo\\WebEstudo\\obj\\",
+        "outputPath": "C:\\Git\\projetos\\WebEstudoCore\\WebEstudo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tavio\\AppData\\Roaming\\NuGet\\NuGet.Config",

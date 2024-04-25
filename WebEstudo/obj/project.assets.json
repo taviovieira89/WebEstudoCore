@@ -4255,11 +4255,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tavio\\source\\repos\\WebEstudo\\WebEstudo\\WebEstudo.csproj",
+      "projectUniqueName": "C:\\Git\\projetos\\WebEstudoCore\\WebEstudo\\WebEstudo.csproj",
       "projectName": "WebEstudo",
-      "projectPath": "C:\\Users\\tavio\\source\\repos\\WebEstudo\\WebEstudo\\WebEstudo.csproj",
+      "projectPath": "C:\\Git\\projetos\\WebEstudoCore\\WebEstudo\\WebEstudo.csproj",
       "packagesPath": "C:\\Users\\tavio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tavio\\source\\repos\\WebEstudo\\WebEstudo\\obj\\",
+      "outputPath": "C:\\Git\\projetos\\WebEstudoCore\\WebEstudo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tavio\\AppData\\Roaming\\NuGet\\NuGet.Config",
